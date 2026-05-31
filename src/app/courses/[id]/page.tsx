@@ -48,10 +48,12 @@ export default function CourseDetails({ params }: PageProps) {
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 md:gap-10">
         <div className="lg:col-span-2 space-y-8">
           {/* Video Player Mock */}
-          <div className="relative aspect-video w-full overflow-hidden rounded-2xl md:rounded-3xl bg-black shadow-2xl group">
+          <div className="relative aspect-video w-full overflow-hidden rounded-2xl md:rounded-3xl bg-gray-100 shadow-2xl group">
             <img 
               src={course.thumbnail} 
               alt={course.title} 
+              loading="eager"
+              decoding="sync"
               className="w-full h-full object-cover opacity-60 transition-transform duration-700 group-hover:scale-105"
             />
             <div className="absolute inset-0 flex items-center justify-center">

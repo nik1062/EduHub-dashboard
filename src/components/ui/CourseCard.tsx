@@ -28,10 +28,12 @@ export function CourseCard({ course, variant = "default", index = 0 }: CourseCar
           )}
           delay={index * 0.1}
         >
-          <div className={cn("relative overflow-hidden", variant === "compact" ? "h-20 w-20 flex-shrink-0 rounded-xl" : "aspect-[16/10]")}>
+          <div className={cn("relative overflow-hidden bg-gray-100", variant === "compact" ? "h-20 w-20 flex-shrink-0 rounded-xl" : "aspect-[16/10]")}>
             <img
               src={course.thumbnail}
               alt={course.title}
+              loading="lazy"
+              decoding="async"
               className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
