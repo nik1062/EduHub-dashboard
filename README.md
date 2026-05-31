@@ -1,36 +1,77 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🎓 EduHub - Next-Gen Learning Dashboard
 
-## Getting Started
+EduHub is a high-fidelity, full-stack Learning Management System (LMS) dashboard designed for modern students. It features a "Neo-Minimalist" aesthetic, interactive motion, and a robust backend powered by MongoDB and NextAuth.js.
 
-First, run the development server:
+![EduHub Preview](https://images.unsplash.com/photo-1501504905252-473c47e087f8?auto=format&fit=crop&q=80&w=1200)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## ✨ Features
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+-   **🚀 Dynamic Dashboard:** Real-time learning statistics, interactive progress charts (Recharts), and "Continue Learning" shortcuts.
+-   **📚 Course Catalog:** Comprehensive catalog with real-time search and category filtering.
+-   **🎥 Interactive Learning:** Deep-dive course views with a mocked video player and an interactive syllabus.
+-   **🤝 Student Community:** A full-featured social hub with trending topics, discussion feeds, and contributor leaderboards.
+-   **💬 Mentorship Messages:** Real-time chat interface with contact management and online status indicators.
+-   **📝 Assignment Tracker:** Status-coded assignment management (Pending, Completed, Missed) with grade tracking.
+-   **🔐 Secure Auth:** Full authentication system using **NextAuth.js**, featuring secure registration, login, and session-aware UI.
+-   **📱 Fully Responsive:** Adaptive design for Mobile, Tablet, and Desktop views.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🛠️ Tech Stack
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+-   **Frontend:** React 19, Next.js 16 (App Router), Tailwind CSS 4, Framer Motion.
+-   **Backend:** Next.js API Routes (Serverless Functions).
+-   **Database:** MongoDB Atlas with Mongoose ORM.
+-   **Authentication:** NextAuth.js (Auth.js) with JWT strategy.
+-   **Charts/Icons:** Recharts, Lucide React.
 
-## Learn More
+## 🚀 Getting Started
 
-To learn more about Next.js, take a look at the following resources:
+### Prerequisites
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+-   Node.js 20+
+-   MongoDB Atlas account
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Installation
 
-## Deploy on Vercel
+1.  **Clone the repository:**
+    ```bash
+    git clone https://github.com/nik1062/EduHub-dashboard.git
+    cd EduHub-dashboard
+    ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+2.  **Install dependencies:**
+    ```bash
+    npm install
+    ```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+3.  **Environment Setup:**
+    Create a `.env.local` file in the root directory and add your credentials:
+    ```env
+    MONGODB_URI=your_mongodb_atlas_connection_string
+    AUTH_SECRET=your_generated_random_secret
+    ```
+
+4.  **Run the development server:**
+    ```bash
+    npm run dev
+    ```
+    Open [http://localhost:3000](http://localhost:3000) with your browser.
+
+## 🌍 Hosting & Deployment
+
+The easiest way to deploy this project is via [Vercel](https://vercel.com).
+
+### Steps to Deploy:
+
+1.  **Push your code** to GitHub (if not already done).
+2.  **Import the project** in Vercel.
+3.  **Configure Environment Variables** in the Vercel Dashboard:
+    -   Add `MONGODB_URI` (your Atlas string).
+    -   Add `AUTH_SECRET` (generate one using `openssl rand -base64 32`).
+4.  **Click Deploy.** Vercel will automatically configure the Next.js build and host your MongoDB API routes.
+
+## 📄 License
+
+Distributed under the MIT License. See `LICENSE` for more information.
+
+---
+Built with ❤️ for the Next-Gen Student Experience.
