@@ -72,7 +72,7 @@ export default function CourseDetails({ params }: PageProps) {
               <h1 className="text-2xl md:text-4xl font-black text-gray-900 mb-2 md:mb-3 leading-tight tracking-tight">{course.title}</h1>
               <div className="flex flex-wrap items-center gap-4 md:gap-8 text-xs md:text-sm text-gray-500 font-medium">
                 <div className="flex items-center gap-2">
-                   <img src={`https://api.dicebear.com/7.x/initials/svg?seed=${course.instructor}`} className="h-6 w-6 rounded-lg" alt="" />
+                   <img src={`https://api.dicebear.com/7.x/initials/svg?seed=${encodeURIComponent(course.instructor)}`} className="h-6 w-6 rounded-lg" alt="" />
                    <span className="font-bold text-gray-900">{course.instructor}</span>
                 </div>
                 <div className="flex items-center gap-1.5">

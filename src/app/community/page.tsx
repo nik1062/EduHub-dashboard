@@ -107,7 +107,7 @@ export default function Community() {
               <Card key={post.id} delay={0.2 + (i * 0.1)} className="p-8 border-none group">
                 <div className="flex justify-between items-start mb-6">
                   <div className="flex items-center gap-4">
-                    <img src={post.avatar} alt={post.user} className="h-12 w-12 rounded-full border-2 border-indigo-50" />
+                    <img src={`https://api.dicebear.com/7.x/avataaars/svg?seed=${encodeURIComponent(post.user)}`} alt={post.user} className="h-12 w-12 rounded-full border-2 border-indigo-50" />
                     <div>
                       <p className="text-sm font-black text-gray-900">{post.user}</p>
                       <p className="text-[11px] font-bold text-gray-400">{post.time} • <span className="text-indigo-600">{post.role}</span></p>

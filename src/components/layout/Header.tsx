@@ -42,7 +42,7 @@ export function Header() {
               <p className="text-[10px] font-bold text-gray-400 uppercase tracking-widest">Premium Student</p>
             </div>
             <img
-              src={session.user.image || `https://api.dicebear.com/7.x/initials/svg?seed=${session.user.name}`}
+              src={session.user.image || `https://api.dicebear.com/7.x/initials/svg?seed=${encodeURIComponent(session.user.name || "User")}`}
               alt={session.user.name || "User"}
               className="h-9 w-9 md:h-10 md:w-10 rounded-xl border-2 border-white shadow-sm bg-gray-50 cursor-pointer"
             />
