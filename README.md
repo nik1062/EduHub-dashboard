@@ -58,6 +58,8 @@ EduHub is a high-fidelity, full-stack Learning Management System (LMS) dashboard
 
 ## 🌍 Hosting & Deployment
 
+https://edu-hub-dashboard-blue.vercel.app
+
 The easiest way to deploy this project is via [Vercel](https://vercel.com).
 
 ### Steps to Deploy:
